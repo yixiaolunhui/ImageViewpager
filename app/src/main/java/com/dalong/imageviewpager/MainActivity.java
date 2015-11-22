@@ -1,13 +1,17 @@
 package com.dalong.imageviewpager;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -39,6 +43,18 @@ public class MainActivity extends AppCompatActivity {
         urls.add("http://fmn.rrfmn.com/fmn074/20150413/1720/original_WyLG_60c800005a561e83.jpg");
         ad_view=(ImageCycleView)findViewById(R.id.ad_view);
         ad_view2=(ImageCycleView)findViewById(R.id.ad_view2);
+
+        //处理适配 设置比例
+        ViewGroup.LayoutParams params = ad_view.getLayoutParams();
+        ViewGroup.LayoutParams params2 = ad_view2.getLayoutParams();
+        DisplayMetrics dm = new DisplayMetrics();
+        WindowManager windowManager = (WindowManager)getSystemService(Context.WINDOW_SERVICE);
+        windowManager.getDefaultDisplay().getMetrics(dm);
+        params.height = (int) (dm.widthPixels * 0.421875);
+        params2.height = (int) (dm.widthPixels * 0.421875);
+
+        ad_view.setLayoutParams(params);
+        ad_view2.setLayoutParams(params2);
         ad_view.setImageResources(urls, new ImageCycleView.ImageCycleViewListener() {
             @Override
             public void onImageClick(int position, View imageView) {

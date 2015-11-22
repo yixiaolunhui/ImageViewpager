@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         urls.add("http://fmn.rrfmn.com/fmn074/20150413/1720/original_WyLG_60c800005a561e83.jpg");
         ad_view=(ImageCycleView)findViewById(R.id.ad_view);
         ad_view2=(ImageCycleView)findViewById(R.id.ad_view2);
-
         //处理适配 设置比例
         ViewGroup.LayoutParams params = ad_view.getLayoutParams();
         ViewGroup.LayoutParams params2 = ad_view2.getLayoutParams();

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="common_grey_line_color">#dfdfdf</color>
+    <color name="common_orange_color">#FE812C</color>
+    <color name="common_orange_pressed_color">#E96F1B</color>
+</resources>

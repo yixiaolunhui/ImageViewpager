@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.dalong.imageviewpager.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <com.dalong.imageviewpager.ImageCycleView
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:text="Hello World!" />
+
+    <com.dalong.imageviewpager.ImageCycleView
+        android:id="@+id/ad_view2"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:text="Hello World!" />
+</RelativeLayout>
